@@ -2,5 +2,5 @@ spring:
   cloud:
     stream:
       bindings:
-        input:
-          destination: uppercase
+        input: # name of the spring cloud stream channel abstraction
+          destination: uppercase # queue where the uppercase message is waiting

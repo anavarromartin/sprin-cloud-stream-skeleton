@@ -7,7 +7,7 @@ import org.springframework.cloud.stream.messaging.Sink;
 import org.springframework.stereotype.Component;
 
 @Component
-@EnableBinding(Sink.class)
+@EnableBinding(Sink.class) // default Spring Cloud Stream interface for only receiving messages
 @Slf4j
 public class MessageLogger {
 

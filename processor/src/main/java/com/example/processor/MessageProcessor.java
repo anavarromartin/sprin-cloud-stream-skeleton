@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import reactor.core.publisher.Flux;
 
 @Component
-@EnableBinding(Processor.class)
+@EnableBinding(Processor.class) // default Spring Cloud Stream interface for receiving and sending messages
 @Slf4j
 public class MessageProcessor {
 

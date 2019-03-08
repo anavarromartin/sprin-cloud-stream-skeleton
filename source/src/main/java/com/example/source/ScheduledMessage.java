@@ -10,12 +10,14 @@ import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 
 @Component
-@EnableBinding(Source.class)
+@EnableBinding(Source.class) // default Spring Cloud Stream interface for only sending messages
 @EnableScheduling
 @RequiredArgsConstructor
 @Slf4j
 public class ScheduledMessage {
 
+    // Instantiation of the interface to connect with the message broker under the abstraction
+    // (autowiring enabled by @EnableBinding)
     private final Source source;
 
     @Scheduled(fixedRate = 2000)
